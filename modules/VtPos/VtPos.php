@@ -1,14 +1,5 @@
 <?php
 
-/* +**********************************************************************************
- * The contents of this file are subject to the vtiger CRM Public License Version 1.0
- * ("License"); You may not use this file except in compliance with the License
- * The Original Code is:  vtiger CRM Open Source
- * The Initial Developer of the Original Code is vtiger.
- * Portions created by vtiger are Copyright (C) vtiger.
- * All Rights Reserved.
- * ********************************************************************************** */
-
 include_once 'modules/Vtiger/CRMEntity.php';
 
 class VtPos extends Vtiger_CRMEntity {
@@ -111,14 +102,6 @@ class VtPos extends Vtiger_CRMEntity {
         include_once('vtlib/Vtiger/Event.php');
         require 'modules/com_vtiger_workflow/VTEntityMethodManager.inc';
 
-        /**
-         * ================================================================================== 
-         */
-//        $Mdl_sales = new Vtiger_Module();
-//        $Mdl_sales->name = 'VtPos';
-//        $Mdl_sales->parent = "Sales";
-
-
         $Mdl_sales = Vtiger_Module::getInstance("VtPos");
 
         // Webservice Setup
@@ -140,8 +123,6 @@ class VtPos extends Vtiger_CRMEntity {
         $blockV2->label = 'LBL_PRODUCTS_LIST';
         $Mdl_sales->addBlock($blockV2);
 
-
-
         $fld_sls1 = new Vtiger_Field();
         $fld_sls1->name = "vtposid";
         $fld_sls1->label = "LBL_SALES_ID";
@@ -153,7 +134,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls1->presence = 1;
         $fld_sls1->sequence = 1;
         $fld_sls1->typeofdata = 'I~M';
-        $fld_sls1->displaytype = 3; // not displayed 
+        $fld_sls1->displaytype = 3;
         $blockV1->addField($fld_sls1);
 
         $fld_sls2 = new Vtiger_Field();
@@ -167,9 +148,9 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls2->readonly = 0;
         $fld_sls2->presence = 2;
         $fld_sls2->sequence = 2;
-        $fld_sls2->quickcreate = 0; // 0 = displayed ,  1= not displayed
+        $fld_sls2->quickcreate = 0;
         $fld_sls2->typeofdata = 'V~M';
-        $fld_sls2->displaytype = 1; //3=not displayed ; 1= displayed ; 2=display just in detail mode not edit mode
+        $fld_sls2->displaytype = 1;
         $blockV1->addField($fld_sls2);
         $Mdl_sales->setEntityIdentifier($fld_sls2);
 
@@ -203,7 +184,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls4->presence = 2;
         $fld_sls4->sequence = 4;
         $fld_sls4->typeofdata = 'T~M';
-        $fld_sls4->displaytype = 2; // not displayed 
+        $fld_sls4->displaytype = 2;
         $blockV1->addField($fld_sls4);
 
         $fld_sls41 = new Vtiger_Field();
@@ -231,7 +212,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls5->presence = 2;
         $fld_sls5->sequence = 6;
         $fld_sls5->typeofdata = 'V~O';
-        $fld_sls5->displaytype = 1; // displayed 
+        $fld_sls5->displaytype = 1; 
         $blockV1->addField($fld_sls5);
         $fld_sls5->setRelatedModules(Array("Contacts"));
 
@@ -248,7 +229,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls6->presence = 2;
         $fld_sls6->sequence = 7;
         $fld_sls6->typeofdata = 'N~O';
-        $fld_sls6->displaytype = 1; // displayed 
+        $fld_sls6->displaytype = 1; 
         $blockV1->addField($fld_sls6);
 
         $fld_sls7 = new Vtiger_Field();
@@ -263,7 +244,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls7->presence = 2;
         $fld_sls7->sequence = 8;
         $fld_sls7->typeofdata = 'N~O';
-        $fld_sls7->displaytype = 1; // displayed 
+        $fld_sls7->displaytype = 1; 
         $blockV1->addField($fld_sls7);
 
         $fld_sls8 = new Vtiger_Field();
@@ -278,7 +259,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls8->presence = 2;
         $fld_sls8->sequence = 9;
         $fld_sls8->typeofdata = 'N~O';
-        $fld_sls8->displaytype = 1; // displayed 
+        $fld_sls8->displaytype = 1; 
         $blockV1->addField($fld_sls8);
 
 
@@ -295,7 +276,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls10->sequence = 10;
         $fld_sls10->defaultvalue = 'LBL_CACHE';
         $fld_sls10->typeofdata = 'V~O';
-        $fld_sls10->displaytype = 1; // displayed 
+        $fld_sls10->displaytype = 1; 
         $fld_sls10->setPicklistValues(array("LBL_CACHE", "LBL_CREDIT", "LBL_CHECK", "LBL_CB"));
         $blockV1->addField($fld_sls10);
 
@@ -312,7 +293,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls9->presence = 2;
         $fld_sls9->sequence = 11;
         $fld_sls9->typeofdata = 'N~O';
-        $fld_sls9->displaytype = 1; // displayed 
+        $fld_sls9->displaytype = 1; 
         $blockV1->addField($fld_sls9);
 
         $fld_sls11 = new Vtiger_Field();
@@ -327,7 +308,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls11->presence = 2;
         $fld_sls11->sequence = 12;
         $fld_sls11->typeofdata = 'N~O';
-        $fld_sls11->displaytype = 1; // displayed 
+        $fld_sls11->displaytype = 1; 
         $blockV1->addField($fld_sls11);
 
         $fld_sls12 = new Vtiger_Field();
@@ -342,7 +323,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls12->presence = 2;
         $fld_sls12->sequence = 13;
         $fld_sls12->typeofdata = 'N~O';
-        $fld_sls12->displaytype = 1; // displayed 
+        $fld_sls12->displaytype = 1; 
         $blockV1->addField($fld_sls12);
 
         $fld_sls13 = new Vtiger_Field();
@@ -357,7 +338,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls13->presence = 2;
         $fld_sls13->sequence = 14;
         $fld_sls13->typeofdata = 'N~O';
-        $fld_sls13->displaytype = 1; // displayed 
+        $fld_sls13->displaytype = 1; 
         $blockV1->addField($fld_sls13);
 
         $fld_sls14 = new Vtiger_Field();
@@ -372,7 +353,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_sls14->presence = 2;
         $fld_sls14->sequence = 15;
         $fld_sls14->typeofdata = 'V~O';
-        $fld_sls14->displaytype = 1; // displayed 
+        $fld_sls14->displaytype = 1; 
 
         $blockV1->addField($fld_sls14);
 
@@ -387,10 +368,7 @@ class VtPos extends Vtiger_CRMEntity {
                 ->addField($fld_sls7, 3)
                 ->addField($fld_sls10, 4);
 
-
-
         $Mdl_sales->addLink("DETAILVIEWWIDGET", "LBL_NEW_SALE", 'module=' . $Mdl_sales->name . '&view=Edit&mode=pos');
-
 
         $MdlContacts = Vtiger_Module::getInstance("Contacts");
 
@@ -415,7 +393,7 @@ class VtPos extends Vtiger_CRMEntity {
         $fld_ctn7->sequence = 9;
         $fld_ctn7->defaultvalue = 0;
         $fld_ctn7->typeofdata = 'N~O';
-        $fld_ctn7->displaytype = 1; // displayed 
+        $fld_ctn7->displaytype = 1; 
         $blockC1->addField($fld_ctn7);
 
 
