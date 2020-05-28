@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<module>
+    <exporttime>2017-07-05 12:00:00</exporttime>
+    <name>VtPos</name>
+    <label>VtPos</label>
+    <parent>Sales</parent>
+    <type>extension</type>
+    <version>1.0.1</version>
+    <customized>0</customized>
+    <isentitytype>1</isentitytype>
+    <dependencies>
+        <vtiger_version>7.0.1</vtiger_version>
+        <vtiger_max_version>7.*</vtiger_max_version>
+    </dependencies>
+
+    <license>
+        <inline><![CDATA[
+  *************************************************************************************************************
+ *  Module              : VtPos
+ *  Version             : 1.0.1
+ *  Vtiger              : 6.X.X, 7.X.X
+ *  Author              : Brahim EL AASSAL
+ *  Supported browsers  : Internet Explorer 7 or higher, Mozilla Firefox 3.0 or higher ,Chrome 4.0 or higher
+ **************************************************************************************************************
+
+ LICENSE
+ 
+ The VtPos is under GNU General Public License v3.0;
+
+
+ ]]></inline>
+    </license>
+    <tables>
+        <table>
+            <name>vtiger_sales_detail</name>
+            <sql>
+                <![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_sales_detail` (
+                `salesid` int(11) DEFAULT NULL,
+                `productid` int(11) DEFAULT NULL,
+                `quantity` decimal(8,3) DEFAULT NULL,
+                `unit_price` decimal(25,4) DEFAULT NULL,
+                `total_price` decimal(25,4) DEFAULT NULL) 
+                ENGINE=InnoDB]]>
+            </sql>
+        </table>
+        <table>
+            <name>vtiger_vtpos_config</name>
+            <sql>
+                <![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_vtpos_config` (
+                    `ticket_header` varchar(255) NOT NULL default 'VtPos',
+                    `ticket_footer` varchar(255) NOT NULL default 'Thank you for shopping with VtPos Have a wonderful day',
+                    `ticket_header_image` varchar(255),
+                    `credit_enabled` tinyint(1) NOT NULL DEFAULT '1',
+                    `credit_card_enabled` tinyint(1) NOT NULL DEFAULT '1',
+                    `vtiger_unique_key` varchar(255),
+                    `pos_unique_key` varchar(255),
+                    `stripe_is_test` tinyint(1) NOT NULL DEFAULT '1',
+                    `stripe_test_key` varchar(255),
+                    `stripe_live_key` varchar(255),
+                    `function` text)
+                   ENGINE=InnoDB]]>
+            </sql>
+        </table>
+    </tables>
+</module>
