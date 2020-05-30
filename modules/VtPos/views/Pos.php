@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @author Brahim EL AASSAL , belaassal@gmail.com
+ */
+
+
 class VtPos_Pos_View extends Vtiger_Edit_View {
 
     private $Cible = "";

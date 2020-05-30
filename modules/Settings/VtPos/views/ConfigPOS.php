@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Brahim EL AASSAL , belaassal@gmail.com
+ */
+
 
 class Settings_VtPos_ConfigPOS_View extends Settings_Vtiger_Index_View {
 

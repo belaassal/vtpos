@@ -1,5 +1,10 @@
 <?php
 
+
+/**
+ * @author Brahim EL AASSAL , belaassal@gmail.com
+ */
+
 include_once 'modules/Vtiger/CRMEntity.php';
 
 class VtPos extends Vtiger_CRMEntity {

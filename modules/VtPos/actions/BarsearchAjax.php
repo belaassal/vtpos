@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @author Brahim EL AASSAL , belaassal@gmail.com
+ */
+
+ 
 class VtPos_BarsearchAjax_Action extends Vtiger_Save_Action {
 
     public function process(Vtiger_Request $request) {

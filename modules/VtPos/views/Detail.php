@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Brahim EL AASSAL , belaassal@gmail.com
+ */
+
 class VtPos_Detail_View extends Vtiger_Detail_View {
 
     function __construct() {

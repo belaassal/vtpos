@@ -1,4 +1,6 @@
 
+// @author Brahim EL AASSAL , belaassal@gmail.com
+
 Vtiger_Detail_Js("VtPos_Detail_Js", {}, {
     printTicket: function(){
         $("#btn_print_ticket").click(function(){

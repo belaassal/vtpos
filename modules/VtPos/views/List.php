@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Brahim EL AASSAL , belaassal@gmail.com
+ */
+
 class VtPos_List_View extends Vtiger_List_View {
 
     function preProcess(Vtiger_Request $request, $display = true) {

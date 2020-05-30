@@ -1,4 +1,6 @@
 
+// @author Brahim EL AASSAL , belaassal@gmail.com
+
 Vtiger_Edit_Js("VtPos_Pos_Js", {}, {
     productExist: false,
     salesTax: 0,
