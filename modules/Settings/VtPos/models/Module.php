@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @author Brahim EL AASSAL , belaassal@gmail.com
+ */
+
 
 class Settings_VtPos_Module_Model extends Settings_Vtiger_Module_Model {
 
