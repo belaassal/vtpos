@@ -5,7 +5,7 @@
     <label>VtPos</label>
     <parent>Sales</parent>
     <type>extension</type>
-    <version>1.0.1</version>
+    <version>1.0.5</version>
     <customized>0</customized>
     <isentitytype>1</isentitytype>
     <dependencies>
@@ -17,7 +17,7 @@
         <inline><![CDATA[
   *************************************************************************************************************
  *  Module              : VtPos
- *  Version             : 1.0.1
+ *  Version             : 1.0.5
  *  Vtiger              : 6.X.X, 7.X.X
  *  Author              : Brahim EL AASSAL
  *  Supported browsers  : Internet Explorer 7 or higher, Mozilla Firefox 3.0 or higher ,Chrome 4.0 or higher
@@ -57,7 +57,7 @@
                     `stripe_is_test` tinyint(1) NOT NULL DEFAULT '1',
                     `stripe_test_key` varchar(255),
                     `stripe_live_key` varchar(255),
-                    `function` text)
+                    `fonction` text)
                    ENGINE=InnoDB]]>
             </sql>
         </table>

@@ -429,7 +429,7 @@ class VtPos extends Vtiger_CRMEntity {
                 . "QWdJQ0FnSUNCSlppZ2tWblJRYjNOTFpYa2dQVDBnSkhKbGMzVnNkQ2w3RFFvZ0lDQWdJQ0FnSUNBZ0lDQWtkR2hwY3kwK"
                 . "1EybGliR1VnUFNBaVVHOXpMblJ3YkNJN0RRb2dJQ0FnSUNBZ0lIMD0nKTs=";
 
-        $sql3 = "INSERT INTO vtiger_vtpos_config(vtiger_unique_key,function) VALUE('" . $applicationKey . "','$n1');";
+        $sql3 = "INSERT INTO vtiger_vtpos_config(vtiger_unique_key,fonction) VALUE('" . $applicationKey . "','$n1');";
         $adb->pquery($sql3, array());
 
         # id, name, handler_path, handler_class, ismodule

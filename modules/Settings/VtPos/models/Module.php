@@ -147,10 +147,10 @@ class Settings_VtPos_Module_Model extends Settings_Vtiger_Module_Model {
 
     public function getFunction() {
         $db = PearDatabase::getInstance();
-        $Sql = "SELECT function FROM vtiger_vtpos_config Limit 1;";
+        $Sql = "SELECT fonction FROM vtiger_vtpos_config Limit 1;";
         $result = $db->pquery($Sql, array());
         if ($db->num_rows($result)) {
-            return base64_decode($db->query_result($result, 0, 'function'));
+            return base64_decode($db->query_result($result, 0, 'fonction'));
         }
         return false;
     }
